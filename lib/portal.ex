@@ -87,11 +87,11 @@ defimpl Inspect, for: Portal do
 
     max = max(String.length(left_door), String.length(left_data))
 
-    """
+    String.trim("""
     #Portal<
       #{String.pad_leading(left_door, max)} <=> #{right_door}
       #{String.pad_leading(left_data, max)} <=> #{right_data}
     >
-    """
+    """)
   end
 end
